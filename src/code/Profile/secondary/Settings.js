@@ -63,7 +63,6 @@ export default class New extends Component {
   }
   doUpdate = info => {
     downloadUpdate(info).then(hash => {
-    alert(hash)
     Alert.alert('Alert', 'Download finished, whether to restart the application?', [
             {text: 'Yes', onPress: ()=>{switchVersion(hash)}},
             {text: 'No',},

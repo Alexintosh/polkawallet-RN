@@ -19,7 +19,7 @@ import Api from '@polkadot/api/promise';
 import WsProvider from '@polkadot/rpc-provider/ws';
 import formatBalance from '../../../util/formatBalance'
 import moment from "moment/moment";
-
+import {NavigationActions, StackActions} from "react-navigation";
 import SInfo from 'react-native-sensitive-info';
 import Keyring from '@polkadot/keyring'
 import { mnemonicToSeed, mnemonicValidate, naclKeypairFromSeed, randomAsU8a,randomAsHex, mnemonicGenerate } from '@polkadot/util-crypto';
@@ -335,7 +335,13 @@ export default class Polkawallet extends Component {
                   balance = await api.query.balances.freeBalance(this.props.rootStore.stateStore.Accounts[this.props.rootStore.stateStore.Account].address);
                   this.props.rootStore.stateStore.balance=String(balance)
                 })()
-                this.props.navigation.navigate('Tabbed_Navigation')
+                let resetAction = StackActions.reset({
+                  index: 0,
+                  actions: [
+                      NavigationActions.navigate({ routeName: 'Tabbed_Navigation'})
+                  ]
+                })
+                this.props.navigation.dispatch(resetAction)
               }}
             >
               <Image

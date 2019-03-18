@@ -16,7 +16,7 @@
 {
   NSURL *jsCodeLocation;
 
-  #ifdef DEBUG
+  #if DEBUG
     jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
   #else
     

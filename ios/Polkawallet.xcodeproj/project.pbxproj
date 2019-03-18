@@ -1619,7 +1619,7 @@
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = VM4P72727W;
 				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
+					"$(inherited)$(SRCROOT)/../react-native/React**",
 					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-sensitive-info/ios/RNSensitiveInfo",
 					"$(SRCROOT)/../node_modules/react-native-randombytes",
@@ -1656,7 +1656,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VM4P72727W;
 				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
+					"$(inherited)$(SRCROOT)/../react-native/React**",
 					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-sensitive-info/ios/RNSensitiveInfo",
 					"$(SRCROOT)/../node_modules/react-native-randombytes",

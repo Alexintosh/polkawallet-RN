@@ -126,7 +126,6 @@ export default class Assets extends Component {
             ]
           })
           this.props.navigation.dispatch(resetAction)
-          // this.props.navigation.navigate('Create_Account',{t:this})
         }else{
           this.setState({
             isfirst:1
